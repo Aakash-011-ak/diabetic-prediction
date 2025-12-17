@@ -3,7 +3,7 @@ import pickle
 import numpy as np
 
 # Load the trained model
-with open("diabetes_model.pkl", "rb") as f:
+with open("logistic_regression_model.pkl", "rb") as f:
     model = pickle.load(f)
 
 st.set_page_config(page_title="Diabetes Prediction", page_icon="🩺")
@@ -38,3 +38,4 @@ if st.button("Predict Diabetes"):
         st.error("⚠️ The person is likely to have Diabetes")
     else:
         st.success("✅ The person is NOT likely to have Diabetes")
+
